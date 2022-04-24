@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include <time.h>
-#define N 100000
+#define N 1000000
 
 // function for swapping
 void swapping(int i, int j, int *arr) {
@@ -68,7 +68,7 @@ clock_t t;
 	}
 //	printf("After instansiating \n");
 //  printf("Unsorted arr\n");
-  printArray(array, n);
+//  printArray(array, n);
   
 
   quickSort(array, 0, n - 1);
