@@ -59,7 +59,7 @@ int *array;
 clock_t t;
     t = clock();
     printf("before malloc \n");
- array = (int*)malloc(200*n * sizeof(int));
+ array = (int*)malloc(n * sizeof(int));
  printf("after allocATION\n");
   	for(i = 0; i < n; i++)
 	{	
