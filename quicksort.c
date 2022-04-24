@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include <time.h>
-#define N 10
+#define N 100000
 
 // function for swapping
 void swapping(int i, int j, int *arr) {
@@ -59,23 +59,23 @@ int *array;
 clock_t t;
     t = clock();
     printf("before malloc \n");
- array = (int*)malloc(n * sizeof(int));
+ array = (int*)malloc(200*n * sizeof(int));
  printf("after allocATION\n");
   	for(i = 0; i < n; i++)
 	{	
 //		temp = array + i;
 		array[i] = rand()%10;
 	}
-	printf("After instansiating \n");
-  printf("Unsorted arr\n");
+//	printf("After instansiating \n");
+//  printf("Unsorted arr\n");
   printArray(array, n);
   
 
   quickSort(array, 0, n - 1);
    t = clock() - t;
-   printf("Sorted arr in ascending order: \n");
-  printArray(array, n);
-    printf("After \n");
+//   printf("Sorted arr in ascending order: \n");
+//  printArray(array, n);
+//    printf("After \n");
 	printf("\n elaspsed = %f  seconds \n", ((double)t)/CLOCKS_PER_SEC);
 	free(array);
   return 0;
